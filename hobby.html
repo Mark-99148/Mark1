@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 缩略图统一样式 */
+        .thumb {
+            width: 150px; /* 缩略图宽度，可调整 */
+            height: 100px;
+            object-fit: cover; /* 保持图片比例 */
+            margin: 5px; /* 图片间距 */
+            cursor: pointer; /* 提示可点击 */
+        }
+        /* 弹窗遮罩（默认隐藏） */
+        #modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+        /* 弹窗里的大图 */
+        #modalImg {
+            max-width: 90%;
+            max-height: 90%;
+        }
+        body{
+            
+  background: linear-gradient(120deg, #f5fafa 0%, #e4f1f2 100%);
+        }
+    </style>
+</head>
+<body>
+              <a href="introductinon.html">点我返回自我介绍主页面</a>
+          <div style="font-size: 30px;text-indent: 2em;">
+           <h1 class="hobby-title">足球</h1>
+             <P> 球类运动首当其冲那肯定是足球,说起足球那可能比很多人都要玩接触,我是在高中时候高一下学期才开始跟着朋友一起在操场
+                上玩弄，当时草地连球门也没有,可以说是起步很晚了哈哈.但是就在这样的环境下,大家和还很乐在其中,也许这就是足球的
+                魅力所在了吧.</P>
+            
+            <img src="photo1.jpg" alt="足球照片1"class="thumb"onclick="openBig(this.src)">
+            <img src="photo2.jpg"alt ="足球照片2"class="thumb"onclick="openBig(this.src)">
+            <img src="photo3.jpg"alt ="足球照片3"class="thumb"onclick="openBig(this.src)">
+            <img src="photo4.jpg"alt ="足球照片4"class="thumb"onclick="openBig(this.src)">
+          </div>
+
+
+ <!-- 弹窗（默认隐藏） -->
+    <div id="modal" onclick="closeBig()">
+         <img src="" id="modalImg">
+    </div>
+
+    <script>
+        // 点击缩略图，显示大图弹窗
+        function openBig(src) {
+            document.getElementById('modalImg').src = src;
+            document.getElementById('modal').style.display = 'flex';
+        }
+        // 点击弹窗，关闭
+        function closeBig() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script>
+
+
+
+
+
+
+
+<div style="font-size: 30px ;text-indent: 2em;">
+    <h1 class="hobby-title">篮球</h1>
+<p>接下来可能就是乒乓球啊篮球啊等等哈哈这些现在都不怎么打啦,改行足球了嘿嘿.</p>
+</div>
+
+
+<!-- 视频区域：默认显示封面+播放按钮 -->
+<div style="margin: 20px 0;">
+    <h3 style="text-indent: 2em;">篮球活动视频</h3>
+    <!-- 视频容器：用于点击触发播放 -->
+    <div id="videoContainer1" style="position: relative; cursor: pointer; width: 600px; height: 340px; background-color: #000;">
+        <!-- 视频元素：默认不自动播放 -->
+        <video id="myVideo1" width="600" height="340" controls style="display: none;">
+            <source src="basketball_video.mp4" type="video/mp4">
+            你的浏览器不支持HTML5视频播放
+        </video>
+        <!-- 自定义播放按钮（默认显示） -->
+        <div id="playBtn1" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 60px; color: #fff;">▶</div>
+    </div>
+</div>
+
+<script>
+    // 获取元素
+    const videoContainer1 = document.getElementById('videoContainer1');
+    const myVideo1 = document.getElementById('myVideo1');
+    const playBtn1 = document.getElementById('playBtn1');
+
+    // 点击容器触发播放
+    videoContainer1.addEventListener('click', function() {
+        if (myVideo1.paused) {
+            // 显示视频控件，隐藏播放按钮，开始播放
+            myVideo1.style.display = 'block';
+            playBtn1.style.display = 'none';
+            myVideo1.play();
+        } else {
+            // 暂停视频
+            myVideo1.pause();
+        }
+    });
+</script>
+
+
+
+<div style="font-size: 30px ;text-indent: 2em;">
+   <h1 class="hobby-title">最近参加的活动</h1>
+    <p>  那就是新生杯足球赛了,院运会当时没来及报哈哈.</p>
+ <img src="1.jpg" alt=""class="thumb"onclick="openBig(this.src)">
+            <img src="2.jpg"alt =""class="thumb"onclick="openBig(this.src)">
+       <img src="3.jpg"alt =""class="thumb"onclick="openBig(this.src)">
+       <img src="4..jpg"alt =""class="thumb"onclick="openBig(this.src)">
+<img src="5.jpg"alt =""class="thumb"onclick="openBig(this.src)">
+<img src="6.jpg"alt =""class="thumb"onclick="openBig(this.src)">
+<img src="7.jpg"alt =""class="thumb"onclick="openBig(this.src)">
+<div id="modal" onclick="closeBig()">
+         <img src="" id="modalImg">
+    </div>
+
+    <script>
+        // 点击缩略图，显示大图弹窗
+        function openBig(src) {
+            document.getElementById('modalImg').src = src;
+            document.getElementById('modal').style.display = 'flex';
+        }
+        // 点击弹窗，关闭
+        function closeBig() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script>
+
+     
+ <div style="margin: 20px 0;">
+      <h3 style="text-indent: 2em;">足球活动视频</h3>
+    <!-- 视频容器：用于点击触发播放 -->
+    <div id="videoContainer2" style="position: relative; cursor: pointer; width: 600px; height: 340px; background-color: #000;">
+        <!-- 视频元素：默认不自动播放 -->
+        <video id="myVideo2" width="600" height="340" controls style="display: none;">
+            <source src="football_video.mp4" type="video/mp4">
+            你的浏览器不支持HTML5视频播放
+        </video>
+        <!-- 自定义播放按钮（默认显示） -->
+        <div id="playBtn2" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 60px; color: #fff;">▶</div>
+    </div>
+</div>
+    <script>
+    // 获取元素
+    const videoContainer2 = document.getElementById('videoContainer2');
+    const myVideo2 = document.getElementById('myVideo2');
+    const playBtn2 = document.getElementById('playBtn2');
+
+    // 点击容器触发播放
+    videoContainer2.addEventListener('click', function() {
+        if (myVideo2.paused) {
+            // 显示视频控件，隐藏播放按钮，开始播放
+            myVideo2.style.display = 'block';
+            playBtn2.style.display = 'none';
+            myVideo2.play();
+        } else {
+            // 暂停视频
+            myVideo2.pause();
+        }
+    });
+</script>
+     
+<div id="videoContainer3" style="position: relative; cursor: pointer; width: 600px; height: 340px; background-color: #000;">
+        <!-- 视频元素：默认不自动播放 -->
+        <video id="myVideo3" width="600" height="340" controls style="display: none;">
+            <source src="football_video2.mp4" type="video/mp4">
+            你的浏览器不支持HTML5视频播放
+        </video>
+        <!-- 自定义播放按钮（默认显示） -->
+        <div id="playBtn3" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 60px; color: #fff;">▶</div>
+    </div>
+
+</div>
+    <script>
+    // 获取元素
+    const videoContainer3 = document.getElementById('videoContainer3');
+    const myVideo3 = document.getElementById('myVideo3');
+    const playBtn3 = document.getElementById('playBtn3');
+
+    // 点击容器触发播放
+    videoContainer3.addEventListener('click', function() {
+        if (myVideo3.paused) {
+            // 显示视频控件，隐藏播放按钮，开始播放
+            myVideo3.style.display = 'block';
+            playBtn3.style.display = 'none';
+            myVideo3.play();
+        } else {
+            // 暂停视频
+            myVideo3.pause();
+        }
+    });
+</script>
+
+<p>   </p>
+
+     <div id="videoContainer4" style="position: relative; cursor: pointer; width: 600px; height: 340px; background-color: #000;">
+        <!-- 视频元素：默认不自动播放 -->
+        <video id="myVideo4" width="600" height="340" controls style="display: none;">
+            <source src="football_video3.mp4" type="video/mp4">
+            你的浏览器不支持HTML5视频播放
+        </video>
+        <!-- 自定义播放按钮（默认显示） -->
+        <div id="playBtn4" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 60px; color: #fff;">▶</div>
+    </div>
+</div>
+    <script>
+    // 获取元素
+    const videoContainer4 = document.getElementById('videoContainer4');
+    const myVideo4 = document.getElementById('myVideo4');
+    const playBtn4 = document.getElementById('playBtn4');
+
+    // 点击容器触发播放
+    videoContainer4.addEventListener('click', function() {
+        if (myVideo4.paused) {
+            // 显示视频控件，隐藏播放按钮，开始播放
+            myVideo4.style.display = 'block';
+            playBtn4.style.display = 'none';
+            myVideo4.play();
+        } else {
+            // 暂停视频
+            myVideo4.pause();
+        }
+    });
+</script>
+<p>  </p>
+     <div id="videoContainer5" style="position: relative; cursor: pointer; width: 600px; height: 340px; background-color: #000;">
+        <!-- 视频元素：默认不自动播放 -->
+        <video id="myVideo5" width="600" height="340" controls style="display: none;">
+            <source src="football_video4.mp4" type="video/mp4">
+            你的浏览器不支持HTML5视频播放
+        </video>
+        <!-- 自定义播放按钮（默认显示） -->
+        <div id="playBtn5" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 60px; color: #fff;">▶</div>
+    </div>
+</div>
+    <script>
+    // 获取元素
+    const videoContainer5 = document.getElementById('videoContainer5');
+    const myVideo5 = document.getElementById('myVideo5');
+    const playBtn5 = document.getElementById('playBtn5');
+
+    // 点击容器触发播放
+    videoContainer5.addEventListener('click', function() {
+        if (myVideo5.paused) {
+            // 显示视频控件，隐藏播放按钮，开始播放
+            myVideo5.style.display = 'block';
+            playBtn5.style.display = 'none';
+            myVideo5.play();
+        } else {
+            // 暂停视频
+            myVideo5.pause();
+        }
+    });
+</script>
+<p>  </p>
+ <div id="videoContainer6" style="position: relative; cursor: pointer; width: 600px; height: 340px; background-color: #000;">
+        <!-- 视频元素：默认不自动播放 -->
+        <video id="myVideo6" width="600" height="340" controls style="display: none;">
+            <source src="football_ball5.mp4" type="video/mp4">
+            你的浏览器不支持HTML5视频播放
+        </video>
+        <!-- 自定义播放按钮（默认显示） -->
+        <div id="playBtn6" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 60px; color: #fff;">▶</div>
+    </div>
+</div>
+    <script>
+    // 获取元素
+    const videoContainer6 = document.getElementById('videoContainer6');
+    const myVideo6 = document.getElementById('myVideo6');
+    const playBtn6 = document.getElementById('playBtn6');
+
+    // 点击容器触发播放
+    videoContainer6.addEventListener('click', function() {
+        if (myVideo6.paused) {
+            // 显示视频控件，隐藏播放按钮，开始播放
+            myVideo6.style.display = 'block';
+            playBtn6.style.display = 'none';
+            myVideo6.play();
+        } else {
+            // 暂停视频
+            myVideo6.pause();
+        }
+    });
+</script>
+
+<p> </p>
+<div style="font-size: 100px ;text-indent: 2em;"></div>
+<img src="8.jpg" alt=""class="thumb"onclick="openBig(this.src)">
+<div id="modal" onclick="closeBig()">
+         <img src="" id="modalImg">
+    </div>
+
+    <script>
+        // 点击缩略图，显示大图弹窗
+        function openBig(src) {
+            document.getElementById('modalImg').src = src;
+            document.getElementById('modal').style.display = 'flex';
+        }
+        // 点击弹窗，关闭
+        function closeBig() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

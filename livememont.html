@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style> 
+        body{
+            
+  background: linear-gradient(120deg, #f5f7fa 0%, #e4e9f2 100%);
+        }
+</style>
+
+<div style="font-size: 30px ;text-indent: 2em;">
+   <h1 class="hobby-title">最近参加的活动</h1>
+    <p>  那就是新生杯足球赛了,院运会当时没来及报哈哈.</p>
+ <img src="1.jpg" alt=""class="thumb"onclick="openBig(this.src)">
+            <img src="2.jpg"alt =""class="thumb"onclick="openBig(this.src)">
+       <img src="3.jpg"alt =""class="thumb"onclick="openBig(this.src)">
+       <img src="4..jpg"alt =""class="thumb"onclick="openBig(this.src)">
+<img src="5.jpg"alt =""class="thumb"onclick="openBig(this.src)">
+<img src="6.jpg"alt =""class="thumb"onclick="openBig(this.src)">
+<img src="7.jpg"alt =""class="thumb"onclick="openBig(this.src)">
+<div id="modal" onclick="closeBig()">
+         <img src="" id="modalImg">
+    </div>
+
+    <script>
+        // 点击缩略图，显示大图弹窗
+        function openBig(src) {
+            document.getElementById('modalImg').src = src;
+            document.getElementById('modal').style.display = 'flex';
+        }
+        // 点击弹窗，关闭
+        function closeBig() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script>
+
+
+
+
+
+
+</head>
+<body>
+    <a href="introductinon.html">点我返回自我介绍主页面</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
